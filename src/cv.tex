@@ -8,73 +8,116 @@
 \usepackage{supertabular}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{fontenc}
+\usepackage{fontspec}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
-%\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-%\setmainfont[
-%SmallCapsFont = Fontin-SmallCaps,
-%BoldFont = Fontin-Bold,
-%ItalicFont = Fontin-Italic
-%]
-%{Fontin}
-%%%
+\setmainfont[
+    SmallCapsFont = Fontin-SmallCaps,
+    BoldFont = Fontin-Bold,
+    ItalicFont = Fontin-Italic
+]
+{Fontin}
 
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titleformat
+    {\section}
+    {\Large \scshape \raggedright}
+    {}{0em}{}
+    [\titlerule]
+
+\titlespacing
+    {\section}
+    {0pt}{3pt}{3pt}
+
 \begin{document}
+\pagestyle{empty}
 
+\par{
+    \centering
+	{ \Huge Guy \textsc{Paterson-Jones} }
+    \bigskip
+    \par
+}
 
-\pagestyle{empty} % non-numbered pages
+\vspace{3em}
 
-%--------------------TITLE-------------
-\par{\centering
-		{\Huge Guy \textsc{Paterson-Jones}
-	}\bigskip\par}
-
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
 \section{Personal Data}
-
 \begin{tabular}{rl}
     \textsc{Place and Date of Birth:} & Cape Town, South Africa  | 10 May 1995 \\
-    \textsc{Address:}   & 52 Empire Road, Hout Bay \\
-    \textsc{Phone:}     & 082 265 6120\\
-    \textsc{Email:}     & \href{mailto:guy.paterson.jones@gmail.com}{guy.paterson.jones@gmail.com} \\ \\
-    \textsc{Github:} & \href{https://github.com/bubblyworld}{https://github.com/bubblyworld} \\
-    & \href{https://github.com/nogju}{https://github.com/nogju}
+    \textsc{Address:}                 & 52 Empire Road, Hout Bay \\
+    \textsc{Phone:}                   & 082 265 6120\\
+    \textsc{Email:}                   & \href{mailto:guy.paterson.jones@gmail.com}{guy.paterson.jones@gmail.com} \\ \\
+    \textsc{Github:}                  & \href{https://github.com/bubblyworld}{https://github.com/bubblyworld} \\
+                                      & \href{https://github.com/nogju}{https://github.com/nogju}
 \end{tabular}
 
-%Section: Work Experience at the top
+\vspace{2em}
+
 \section{Work Experience}
 \begin{tabular}{r|p{11cm}}
-\textsc{Dec-Feb 2017} & Freelance Work for \textsc{Tim Lind} \\&\footnotesize{Worked on a full-stack Javascript web application. }\\\multicolumn{2}{c}{} \\
- \textsc{Dec-Feb 2016} & Internship at \textsc{Amazon}, Cape Town \\&\footnotesize{Interned on the data services team, focusing on internal data storage and transformation.}\\\multicolumn{2}{c}{} \\
- \textsc{Dec-Feb 2015}&{Internship with \textsc{Guy Bedford} and \textsc{Tim Lind}}\\&\footnotesize{Worked on the JSPM project, a javascript front-end package manager, building an isomorphic rendering platform called \emph{Zygo}.}\\\multicolumn{2}{c}{} \\
- \textsc{Dec-Feb 2014} & Internship at \textsc{Amazon}, Cape Town \\&\footnotesize{Interned on the compute team building internal diagnostic tools.}\\\multicolumn{2}{c}{} \\
- 
-\textsc{2012} & Freelance Work for \textsc{SA Bullion}
-\\&\footnotesize{Front-end work building a interactive chart displaying gold prices in various timeframes and currencies.}
+    \textsc{July-Nov 2017} & Departmental Tutor for the \textsc{University of Cape Town} \\
+                           & \footnotesize{Taught first-year students both pure and applied mathematics.} \\
+                             \multicolumn{2}{c}{} \\
+
+    \textsc{Dec-Feb 2017} & Freelance Work for \textsc{Tim Lind} \\
+                          & \footnotesize{Worked on a full-stack Javascript web application.} \\
+                            \multicolumn{2}{c}{} \\
+
+    \textsc{Dec-Feb 2016} & Internship at \textsc{Amazon}, Cape Town \\
+                          & \footnotesize{Interned on the data services team, focusing on internal data storage and transformation.}\\
+                            \multicolumn{2}{c}{} \\
+
+    \textsc{Dec-Feb 2015} & Internship with \textsc{Guy Bedford} and \textsc{Tim Lind}\\
+                          & \footnotesize{Worked on the JSPM project, a javascript front-end package manager, building an isomorphic rendering platform called \emph{Zygo}.} \\
+                            \multicolumn{2}{c}{} \\
+
+    \textsc{Dec-Feb 2014} & Internship at \textsc{Amazon}, Cape Town \\
+                          & \footnotesize{Interned on the compute team building internal diagnostic tools.} \\
+                            \multicolumn{2}{c}{} \\
+
+    \textsc{2012} & Freelance Work for \textsc{SA Bullion} \\
+                  &\footnotesize{Front-end work building a interactive chart displaying gold prices in various timeframes and currencies.}
 \end{tabular}
 
-%Section: Education
+\vspace{2em}
+
 \section{Education}
-\begin{tabular}{rl}	
- 2018 & Honours in \textsc{Mathematics}\\&\textbf{University of Cape Town}, South Africa\\&\\
+\begin{tabular}{rl}
+    2018 & Honours in \textsc{Mathematics} \\
+         & \textbf{University of Cape Town}, South Africa \\
+         & \\
 
-2016 & BSc in \textsc{Mathematics} and \textsc{Applied Mathematics}\\&\textbf{University of Cape Town}, South Africa\\&\\
+    2016 & BSc in \textsc{Mathematics} and \textsc{Applied Mathematics} \\
+         & \textbf{University of Cape Town}, South Africa \\
+         & \\
 
-2013 & National Senior Certificate \\&\normalsize\textbf{Diocesan College}, Cape Town\\
+    2013 & National Senior Certificate \\
+         & \normalsize\textbf{Diocesan College}, Cape Town \\
 \end{tabular}
 
-%Section: Scholarships and additional info
+\newpage
 \section{Scholarships and Certificates}
 \begin{tabular}{rl}
-2014-2015 & Vice-Chancellor's Scholarship for performance in mathematical olympiads.\\&\\
- 2009-2013 & Major mathematics scholarship, Diocesan College.\\
+    2014-2015 & Vice-Chancellor's Scholarship for performance in mathematical olympiads. \\
+              & \\
+    2009-2013 & Major mathematics scholarship, Diocesan College. \\
+\end{tabular}
+
+\vspace{2em}
+
+\section{Notable Achievements}
+\begin{tabular}{rl}
+    2017 & Conference: ARMSCOR Cryptography \\
+         & \footnotesize{Gave a talk on the Number Field Sieve factorisation algorithm and its relevance to modern cryptography.} \\
+         & \\
+
+    2016 & 2016 International Collegiate Programming Context Finalist \\
+         & \footnotesize{Represented South Africa in the finals of the 2016 ICPC held in South Dakota.} \\
+         & \\
+
+    2015 & Conference: 2nd Workshop on Mathematical Structures: Categories in Algebra and Topology \\
+         & \footnotesize{Gave a talk on internalising groupoids categorically.} \\
 \end{tabular}
 
 \end{document}
